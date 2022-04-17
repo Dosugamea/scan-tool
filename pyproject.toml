@@ -1,22 +1,47 @@
 [tool.poetry]
-name = "python-prj-sample"
+name = "scanTool"
 version = "0.1.0"
-description = ""
-authors = ["hoge <hoge@example.com>"]
+description = "Doujinshi scan helper using DoujinAPI2"
+authors = ["Dosugamea <dsgamaer777@gmail.com>"]
+license = "AGPLv3"
+readme = "README.md"
+homepage = "https://github.com/Dosugamea/scan-tool#readme"
+repository = "https://github.com/Dosugamea/scan-tool"
+keywords = ["doujinshi", "scan", "utility"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Utilities"
+]
+include = [
+    "LICENSE",
+    "README.md"
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 python-dotenv = {extras = ["cli"], version = "^0.19.0"}
+doujinapi = "^0.1.0"
+PySimpleGUI = "^4.59.0"
+taskipy = "^1.10.1"
 
 [tool.poetry.dev-dependencies]
 pysen = {version = "0.9.1", extras = ["lint"]}
 pytest = "^6.2.4"
 pytest-mock = "^3.6.1"
 pytest-sugar = "^0.9.4"
+pytest-asyncio = "^0.18.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+start = { cmd = "python scanTool/main.py", help = "start GUI" }
+
+[tool.pytest.ini_options]
+asyncio_mode = "strict"
+testpaths = ["tests"]
 
 [tool.pysen]
 version = "0.9"
@@ -25,7 +50,7 @@ version = "0.9"
 enable_black = true
 enable_flake8 = true
 enable_isort = true
-enable_mypy = false
+enable_mypy = true
 mypy_preset = "strict"
 line_length = 88
 py_version = "py38"
