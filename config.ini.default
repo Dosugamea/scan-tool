@@ -1,0 +1,24 @@
+[environment_option]
+doujinshi_api_key = Doujinshi.orgのAPIキー
+target_folder = 処理対象フォルダ
+
+[process_option]
+mode = 1
+ignore_low_similarity = 1
+warn_page_count_mismatch = 1
+rename_file_by_no = 0
+remove_empty_page = 0
+
+[compress_option]
+mode = 1
+remove_folder_after_compress = 0
+make_minimal_archive = 0
+make_more_archive = 0
+
+[shortcut_option]
+create_doujinshi_shortcut = 1
+create_pixiv_shortcut = 1
+create_twitter_shortcut = 1
+create_custom_shortcut = 0
+custom_shortcut_title = 任意のショートカットタイトル
+custom_shortcut_address = 任意のショートカットアドレス

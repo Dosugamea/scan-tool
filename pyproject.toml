@@ -24,6 +24,7 @@ python-dotenv = {extras = ["cli"], version = "^0.19.0"}
 doujinapi = "^0.1.0"
 PySimpleGUI = "^4.59.0"
 taskipy = "^1.10.1"
+pydantic = "^1.9.0"
 
 [tool.poetry.dev-dependencies]
 pysen = {version = "0.9.1", extras = ["lint"]}
